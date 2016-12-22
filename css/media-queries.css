@@ -2,13 +2,13 @@
   .services {
     display: block; }
 
-  ul.topnav li:not(:first-child) {
+  .nav-item {
     display: inline-block; }
 
-  ul.topnav li.icon {
+  .nav-icon {
     display: none; }
 
-  ul.topnav li a {
+  .nav-links {
     font-size: 1.2rem; }
 
   .tablet {
@@ -18,7 +18,17 @@
     max-width: 250px; }
 
   #map {
-    display: block; } }
+    display: block; }
+
+  .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    transition: ease 0.5s; } }
 @media only screen and (min-width: 768px) {
   .wrapper-center {
     width: 750px; }
