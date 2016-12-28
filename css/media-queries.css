@@ -14,6 +14,9 @@
   .tablet {
     display: block; }
 
+  .contact-form .submit-button {
+    width: 20%; }
+
   img {
     max-width: 250px; }
 
@@ -29,21 +32,21 @@
     position: fixed;
     width: 100%;
     transition: ease 0.5s; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .wrapper-center {
-    width: 750px; }
+    width: 1000px; }
 
   .h1 {
-    font-size: 2.4rem; }
+    font-size: 2rem; }
 
   .h2 {
-    font-size: 2.1rem; }
-
-  .h3 {
     font-size: 1.8rem; }
 
+  .h3 {
+    font-size: 1.6rem; }
+
   .h4 {
-    font-size: 1.5rem; }
+    font-size: 1.4rem; }
 
   .h5 {
     font-size: 1.2rem; }
@@ -51,10 +54,19 @@
   .h6 {
     font-size: 1rem; }
 
+  .parallax {
+    display: block; }
+
+  .contact-form .submit-button {
+    width: 20%; }
+
   input[type=submit] {
     width: 50%; }
 
   .desktop {
-    display: block; } }
+    display: block; }
+
+  .servies {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=media-queries.css.map */

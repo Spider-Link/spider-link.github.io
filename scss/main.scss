@@ -95,20 +95,38 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
       display: none;
     }
   }
-  transition: all 2s;
+  transition: all 1s;
   .info-brand{
     display: none;
   }
 }
 
+.about-us-box{
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 
-.box {padding: 1em;}
+.box {padding: 2em;}
 .flex-center {@include flex(center, center);}
 
 
 /* ICONS */
 
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-48 {
+  font-size: 48px;
+  color: white;
+}
+
+.fa{
+  text-decoration: none;
+  color: white;
+  &:hover{
+    opacity: 0.5;
+  }
+}
 
 /* TEXT SETTINGS */
 .h1,
@@ -123,7 +141,10 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
   text-align: center;
   text-transform: uppercase;
 }
-.h2 {font-size: 6vmin;}
+.h2 {
+  font-size: 6vmin;
+  color: white;
+}
 
 .h3 {font-size: 5.5vmin;}
 
@@ -133,13 +154,18 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
 
 .h6 {font-size: 4vmin;}
 
+.section-header {
+  font-size: 6vmin;
+  padding: 2rem 0 2rem 0;
+}
+
 
 .services {
   display: none;
   padding-right: 1.5em;
   padding-left: 1.5em;
   margin: 10px 0 10px 0;
-  font-size: 2vmin;
+  font-size: 2.2vmin;
 }
 
 
@@ -152,23 +178,28 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
 	background-image: linear-gradient(#F38BD3, #FE7880);
 }
 
-/* OM OSS BÖRJAR HÄR */
-.about-us-box{
-	margin-bottom: 5px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	flex-wrap: wrap;
+/* IMAGES */
+
   .circle-img{
     border: 1px solid black;
 		border-radius: 50%;
 		width: 50%;
 		height: 50%;
 		margin-top: 10px;
-	}
 }
 
-/* KONTAKTA OSS BÖRJAR HÄR */
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100px;
+    background-image: url(../pics/parallax.jpg);
+}
+
+.parallax {display: none;}
+
+/* FORMS */
 .contact-form{
   .text-form{
     outline: none;
@@ -192,48 +223,18 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
   .submit-button{
     outline: none;
     border: none;
+    border-radius: 25px;
     background-color: #DC4A5C;
-    width: 100%;
+    width: 70%;
     padding: 10px;
     &:hover{
-      background-color: #E48E98;
+      background-color: black;
+      color: white;
     }
     &:active{
       background-color: #DF4859;
     }
   }
-}
-
-/* FOOTER BÖRJAR HÄR */
-
-.footer-box{
-	text-align: center;
-  .social{
-    display: inline-flex;
-    .fa{
-      text-decoration: none;
-      color: #000000;
-      &:hover{
-        opacity: 0.5;
-      }
-    }
-  }
-}
-
-
-.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: transparent;
-}
-
-.logo {
-  margin: 10px 0 0 10px;
-  float: left;
-  width: 35px;
-  height: 40px;
 }
 
 #topnav {
@@ -270,9 +271,22 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
     100% {opacity: 1;}
     }
 
-/* IMAGES */
-
 /* LISTS */
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.logo {
+  margin: 10px 0 0 10px;
+  float: left;
+  width: 35px;
+  height: 40px;
+}
 
 .nav-item {
   display: none;
@@ -310,6 +324,7 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
     }
 }
 .no-style{list-style: none;}
+.inline-flex {display: inline-flex;}
 
 /* LINKS */
 .nav-links {
@@ -322,6 +337,10 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
   font-size: 5vmin;
 }
 
+.active {
+  background-color: rgba(223, 72, 89, 0.5);
+}
+
 .nav-icon {
   font-size: $base-font * 1.5;
   text-decoration: none;
@@ -332,11 +351,52 @@ img {max-width: $w12; height:auto; vertical-align: middle;}
   cursor:pointer;
 }
 
+.scrollToTop{
+	position:fixed;
+	bottom: 0;
+	left:45vw;
+    i
+    {
+    color: #e48e98;
+  }
+}
+
+
 /* PADDINGS & MARGINS */
 .p-5{padding: 5px;}
 .p-10{padding: 10px;}
+.p-40{padding: 40px;}
+.p-70{padding: 70px;}
 .m-0{margin: 0;}
 .p-0{padding: 0;}
 .pb-0{padding-bottom: 0;}
+.pb-10{padding-bottom: 10px;}
 .pr-0{padding-right: 0;}
 .pl-0{padding-left: 0;}
+.pt-0{padding-top: 0;}
+.mb-15{margin-bottom: 15px;}
+
+/* COLORS */
+.bgc-yellow {
+  background-color: #eff0d1;
+}
+
+.bgc-red {
+background-color: #df4859;
+}
+
+.bgc-black {
+  background-color: black;
+}
+
+.bgc-paradise-pink {
+  background-color: #DF4859;
+}
+
+.tc-white {
+  color: white;
+}
+
+.tc-rudy-pink {
+  color: #E48E98;
+}
