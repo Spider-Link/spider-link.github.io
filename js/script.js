@@ -1,23 +1,4 @@
 // jshint esversion:6
-// TOGGLE NAVBARS
-const hamburger = document.getElementById('hamburger');
-hamburger.onclick = function() {
-    const desktopNav = document.getElementById("desktop-nav");
-    const logo = document.getElementsByClassName('logo')[0];
-    if (desktopNav.className !== "responsive-nav") {
-        desktopNav.className = "responsive-nav";
-    }
-    else {
-      desktopNav.className -= "responsive-nav";
-    }
-    if (logo.style.display === "none") {
-        logo.style.display = 'block';
-    } else {
-        logo.style.display = 'none';
-    }
-};
-
-// SCROLL EFFECTS
 window.onscroll = function() {
     scrollEffects();
 };
@@ -30,87 +11,82 @@ function scrollEffects() {
     const logo = document.getElementById("logo");
     const desktop = window.matchMedia("(min-width: 1024px)");
     const mobile = window.matchMedia("(max-width: 600px)");
-
-    if (scrollBarPosition > 0 && desktop.matches) {
-        desktopNav.style.backgroundColor = "black";
+    if (desktop.matches) {
+      if (scrollBarPosition < 900) {
+        desktopNav.style.backgroundColor = "transparent";
         desktopNav.style.padding = "12px";
         logo.style.padding = "8px";
         logo.style.width = "115%";
+            navLinks[4].style.color = 'rgba(223, 72, 89, 0.5)';
+            for (let i = 4; i < navLinks.length; i++) {
+                if (i !== 4) {
+                    navLinks[i].style.color = 'white';
+                }
+             }
         for (let i = 0; i < navLinks.length; i++) {
           navLinks[i].style.fontSize = "24px";
         }
-    } else if (scrollBarPosition === 0 && desktop.matches) {
-        desktopNav.style.backgroundColor = "transparent";
-        desktopNav.style.padding = "5px";
-        logo.style.padding = "0px";
-        for (let i = 0; i < navLinks.length; i++) {
-          navLinks[i].style.fontSize = "19.2px";
-          logo.style.width = "100%";
-        }
+      }
+        if (scrollBarPosition > 900) {
+              navLinks[5].style.color = 'rgba(223, 72, 89, 0.5)';
+              desktopNav.style.backgroundColor = "black";
+              desktopNav.style.padding = "5px";
+              logo.style.padding = "0px";
+              logo.style.width = "90%";
+              for (let i = 4; i < navLinks.length; i++) {
+                  if (i != 5) {
+                      navLinks[i].style.color = 'white';
+                  }
+              }
+              for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].style.fontSize = "19.2px";
+                }
+            }
 
+ if (scrollBarPosition > 2700) {
+        navLinks[6].style.color = 'rgba(223, 72, 89, 0.5)';
+        for (let i = 4; i < navLinks.length; i++) {
+            if (i !== 6) {
+                navLinks[i].style.color = 'white';
+            }
+        }
+    } if (scrollBarPosition > 4000) {
+        navLinks[7].style.color = 'rgba(223, 72, 89, 0.5)';
+        for (let i = 4; i < navLinks.length; i++) {
+            if (i !== 7) {
+                navLinks[i].style.color = 'white';
+            }
+        }
+    } if (scrollBarPosition > 4900) {
+        navLinks[8].style.color = 'rgba(223, 72, 89, 0.5)';
+        for (let i = 4; i < navLinks.length; i++) {
+            if (i !== 8) {
+                navLinks[i].style.color = 'white';
+            }
+        }
+    }
+  }
+  if (mobile.matches) {
+      if (scrollBarPosition > 1500) {
+          scroller.style.display = "block";
+      }
+      if (scrollBarPosition < 1500) {
+      scroller.style.display = "none";
+    }
+  }
+
+if (!desktop.matches && !mobile.matches) {
+  if (scrollBarPosition < 50) {
+      desktopNav.style.backgroundColor = "transparent";
     }
 
-    if (scrollBarPosition > 0 && desktop.matches === false && mobile.matches === false) {
+    if (scrollBarPosition > 50) {
         desktopNav.style.backgroundColor = "black";
       }
 
-      else if (scrollBarPosition === 0 && desktop.matches === false && mobile.matches === false) {
-          desktopNav.style.backgroundColor = "transparent";
-        }
-
-    if (scrollBarPosition => 0) {
-        navLinks[0].style.backgroundColor = 'rgba(223, 72, 89, 0.5)';
-        for (let i = 0; i < navLinks.length; i++) {
-            if (i !== 0) {
-                navLinks[i].style.backgroundColor = 'transparent';
-            }
-        }
     }
-
-    if (scrollBarPosition > 600) {
-        navLinks[1].style.backgroundColor = 'rgba(223, 72, 89, 0.5)';
-        for (let i = 0; i < navLinks.length; i++) {
-            if (i != 1) {
-                navLinks[i].style.backgroundColor = 'transparent';
-            }
-        }
-    }
-
-    if (scrollBarPosition > 1850) {
-        navLinks[2].style.backgroundColor = 'rgba(223, 72, 89, 0.5)';
-        for (let i = 0; i < navLinks.length; i++) {
-            if (i !== 2) {
-                navLinks[i].style.backgroundColor = 'transparent';
-            }
-        }
-    }
-
-    if (scrollBarPosition > 3070) {
-        navLinks[3].style.backgroundColor = 'rgba(223, 72, 89, 0.5)';
-        for (let i = 0; i < navLinks.length; i++) {
-            if (i !== 3) {
-                navLinks[i].style.backgroundColor = 'transparent';
-            }
-        }
-    }
-    if (scrollBarPosition > 3950) {
-        navLinks[4].style.backgroundColor = 'rgba(223, 72, 89, 0.5)';
-        for (let i = 0; i < navLinks.length; i++) {
-            if (i !== 4) {
-                navLinks[i].style.backgroundColor = 'transparent';
-            }
-        }
-    }
-
-    if (mobile.matches) {
-        if (scrollBarPosition > 1500) {
-            scroller.style.display = "block";
-        }
-        else if (scrollBarPosition < 1500) {
-        scroller.style.display = "none";
-      }
-  }
 }
+
 
 // CONTACT MAP
 function initMap() {
