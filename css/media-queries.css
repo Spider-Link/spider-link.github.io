@@ -1,25 +1,4 @@
-@media only screen and (min-width: 320px) {
-  .spider-logo-footer {
-    display: block;
-    margin: 0 auto; }
-  .wrapper-contact {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto; } }
-
-@media only screen and (min-width: 375px) {
-  .spider-logo-footer {
-    display: block;
-    margin: 0 auto; } }
-
-@media only screen and (min-width: 425px) {
-  .spider-logo-footer {
-    display: block;
-    margin: 0 auto; } }
-
 @media only screen and (min-width: 600px) {
-  .img-clicked {
-    height: 20%; }
   .wrapper-center {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -116,28 +95,11 @@
   .textbox {
     text-align: left; }
   .pt-35-tablet {
-    padding-top: 3.5rem; } }
-
-@media only screen and (max-width: 600px) {
-  .parallax {
+    padding-top: 3.5rem; }
+  .mobile {
     display: none; }
-  li {
-    font-size: 1em; }
-  h1 {
-    font-size: 1.8em;
-    margin-bottom: 0; }
-  h2 {
-    font-size: 1.6em; }
-  h3 {
-    font-size: 1.2em;
-    margin: 0; }
-  h4 {
-    font-size: 1.1em;
-    margin: 0; }
-  h5 {
-    font-size: 1em; }
-  h6 {
-    font-size: 1.4em; } }
+  .active {
+    color: white; } }
 
 @media only screen and (min-width: 1024px) {
   .img-clicked {
